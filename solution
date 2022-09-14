@@ -1,1 +1,51 @@
+Q1.  Configure git user with  below information
+    • Username should be mac
+    • Email Is mac@net.example.com
+    • Push method  is Simple
+    • clone the Git Repository  https://github.com/networknuts/myrepo
+Below tasks have to update in repository
+    • add user harry 
+    • add Node3  in dev
 
+
+ANSWER :
+-----------
+
+
+
+# yum install  git -y                         //you will install git package 
+
+#  git config  --global  user.name  mac
+#  git  config  --global   user.email  mac@net.exampl.com
+#  git config  --global  push.default   simple
+#  vim  .gitconfig
+[user]
+       name = mac
+        email = mac@net.exampl.com
+
+[push]
+       default = simple
+
+# Git config –global -l
+
+# vim inventory                                       //inventory file already exists in exam
+[web]
+System1
+
+[dev]
+System2
+Node3
+
+ # vim user_list.yml
+Users:
+    - name:  frank
+      group: developer
+    - name:  harry
+      group: manager
+    - name:  harry
+      group: developer
+
+
+#  git  add  .
+#  git commit  -m  “commit1”
+#  git  push  origin  master
