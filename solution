@@ -37,10 +37,10 @@ System2
 Node3
 
  # vim user_list.yml
-Users:
-    - name:  frank
-      group: developer
-    - name:  harry
+myusers:
+    - name: jeff
+      group: guests
+    - name: manish
       group: manager
     - name:  harry
       group: developer
