@@ -1,0 +1,34 @@
+6. Configuration modification 
+
+Clone the following git repository
+https://git.lab14.example.com/git/modconf.git
+Perform the following tasks
+--> edit your configuration with following changes
+		--> Disable fact gathering permanently
+		--> Simultaneously ansible should reach 40 hosts
+--> Once the modification is done, commit and push updated configuration to the remote repository
+
+Answer:
+
+
+	#cd /home/admin/git-repos/
+	#git clone <git repo>
+	#cd fork-project
+	#vim ansible.cfg
+	
+	[defaults]
+	inventory=inventory
+	remote_user=admin
+	forks=40
+	gathering=explicit
+
+	[privilege_escalation]
+	become=True
+	become_method=sudo
+	become_user=root
+	become_ask_pass=False
+
+# git add .
+# git commit -m 'coomit name'
+# git push
+# cd ..
