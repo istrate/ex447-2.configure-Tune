@@ -1,34 +1,45 @@
 6. Configuration modification 
 
 Clone the following git repository
-https://git.lab14.example.com/git/modconf.git
+https://github.com/rohitmeachu312/ex447-2.configure-Tune.git
 Perform the following tasks
 --> edit your configuration with following changes
 		--> Disable fact gathering permanently
-		--> Simultaneously ansible should reach 40 hosts
+		--> Simultaneously ansible should reach 45 hosts
 --> Once the modification is done, commit and push updated configuration to the remote repository
 
 Answer:
 
+Solution 2
+------------
 
-	#cd /home/admin/git-repos/
-	#git clone <git repo>
-	#cd fork-project
-	#vim ansible.cfg
-	
-	[defaults]
-	inventory=inventory
-	remote_user=admin
-	forks=40
-	gathering=explicit
+git clone https://github.com/rohitmeachu312/ex447-2.configure-Tune.git
 
-	[privilege_escalation]
-	become=True
-	become_method=sudo
-	become_user=root
-	become_ask_pass=False
+cd ex447-2.configure-Tune.git/
 
-# git add .
-# git commit -m 'coomit name'
-# git push
-# cd ..
+
+
+
+## vim ansible.cfg
+
+[defaults]
+inventory=inventory
+remote_user=admin
+forks=45			//add forks=45 as asked in exam 
+gathering=explicit  // disable the fact gathering as asked in exam
+
+[privilege_escalation] 
+become=True
+become_method=sudo
+become_user=root
+become_ask_pass=False
+
+// we can add privilege escalation also from  global config file
+
+
+
+
+git add .
+git commit -m 'coomit name'
+git push origin master
+cd ..
